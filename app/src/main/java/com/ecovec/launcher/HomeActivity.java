@@ -84,13 +84,13 @@ public class HomeActivity extends Activity {
 
     public void checkDrawOverlayPermission() {
         /** check if we already  have permission to draw over other apps */
-        if (!Settings.canDrawOverlays(HomeActivity.this)) {
+        //if (!Settings.canDrawOverlays(HomeActivity.this)) {
             /** if not construct intent to request permission */
             Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
                     Uri.parse("package:" + getPackageName()));
             /** request permission via start activity for result */
             startActivityForResult(intent, REQUEST_CODE);
-        }
+        //}
     }
 
     @Override
